@@ -1,0 +1,125 @@
+.Notice {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-width: 250px;
+    max-width: 350px;
+    background-color: #323232; /* Default background */
+    color: #fff; /* White text */
+    padding: 15px 20px;
+    border-radius: 12px; /* Softer corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Elevated shadow */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideIn 0.4s ease-out forwards, slideOut 0.4s ease-in forwards 4.8s;
+    z-index: 1000;
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+  
+  .Notice.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .Notice.hide {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  
+  /* Animation for sliding in */
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation for sliding out */
+  @keyframes slideOut {
+    to {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+  }
+  
+  /* Message Styling */
+  .Notice .message {
+    flex: 1;
+    margin-right: 15px;
+    font-size: 16px; /* Larger font for readability */
+    line-height: 1.5;
+  }
+  
+  /* Undo Button Styling */
+  .undo-button {
+    background: transparent;
+    border: 2px solid #ff9800; /* Bold border for emphasis */
+    color: #ff9800;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .undo-button:hover {
+    background-color: #ff9800; 
+    color: #fff; /* Invert text color */
+  }
+  
+  /* Close Button Styling */
+  .close-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%; /* Circular close button */
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .close-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1); /* Slight enlarge effect */
+  }
+  
+  /* Notification Types */
+  .Notice.success {
+    background-color: #4caf50; /* Green */
+  }
+  
+  .Notice.error {
+    background-color: #f44336; /* Red */
+  }
+  
+  .Notice.info {
+    background-color: #2196f3; /* Blue */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .Notice {
+      top: 10px;
+      right: 10px;
+      min-width: 220px;
+      max-width: 280px;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  
+    .undo-button {
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+  
+    .close-button {
+      font-size: 18px;
+    }
+  }
+  

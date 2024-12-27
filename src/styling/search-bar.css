@@ -1,0 +1,360 @@
+/* Search bar container */
+.search-bar-container {
+  order: 0;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  position: relative;
+  width: 100%; /* Full width of the page */
+  padding: 20px 0; /* Add some vertical padding */
+}
+
+/* Search form */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Space between input and button */
+  justify-content: flex-start; /* Align items to the left */
+  position: relative;
+  width: 100%; /* Set width to 100% of the container */
+  max-width: 1200px; /* Wider maximum width for the search bar */
+  min-width: 800px; /* Wider minimum width for the search bar */
+  box-sizing: border-box; /* Ensures padding is included in width */
+  margin: 0 auto; /* Centers the form horizontally */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+/* Snow effect */
+.snow-effect {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: url('/src/images/snow-searchbar.png') repeat-x;
+  background-size: cover;
+  pointer-events: none;
+}
+
+/* Search input */
+.search-input {
+  flex: 1;
+  padding: 12px 20px; 
+  border: 2px solid #007bff; /* Border color */
+  font-size: 18px; /* Larger font size */
+  border-radius: 8px; /* Rounded corners */
+  min-width: 0; /* Prevents input from overflowing */
+  height: 50px; /* Consistent height for input */
+}
+
+/* Buttons */
+.search-button {
+  padding: 12px 20px; 
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* Match font size to input */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px; /* Rounded corners for buttons */
+  height: 50px; /* Consistent height for buttons */
+  min-width: 150px; /* Ensure buttons have consistent width */
+}
+
+/* Flex container for buttons */
+.toggle-buttons {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to the next line */
+  gap: 10px; /* Space between buttons */
+  margin-top: 10px; /* Ensure space above buttons */
+  width: 100%; /* Make sure the buttons span the full width */
+}
+
+/* Top toggle buttons */
+.top-toggle-button {
+  padding: 12px 20px; 
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* Match font size to input */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px; /* Rounded corners for buttons */
+  height: 50px; /* Consistent height for buttons */
+  width: 150px; /* Set width to match Compare and Favorites buttons */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.compare-favorites-button {
+  padding: 12px 20px; 
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* Match font size to input */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px; /* Rounded corners for buttons */
+  height: 50px; /* Consistent height for buttons */
+  width: 150px; /* Set width to match Compare and Favorites buttons */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.top-toggle-button.active {
+  background-color: #28a745; /* Green background for active state */
+}
+
+.top-toggle-button.active:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+
+/* Position labels below the top button */
+.label-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px; /* Add some space between button and labels */
+  width: 100%; /* Ensures the labels are centered */
+}
+
+/* Style for labels */
+label {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 5px; /* Space between labels */
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.search-button i {
+  margin: 0;
+}
+
+/* Dropdown container */
+.dropdowns-container {
+  margin-top: 15px; /* Ensure proper spacing */
+  width: 100%;
+}
+
+/* Dropdown menu (centered below the button) */
+.search-bar-dropdown {
+  position: absolute;
+  top: 100%; /* Aligns the dropdown just below the button */
+  left: 50%; /* Start from the center of the button */
+  transform: translateX(-50%); /* Center the dropdown horizontally */
+  width: 200px; /* Set the dropdown width */
+  max-height: 200px; /* Limit height for overflow */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  z-index: 10;
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid #ddd; /* Light border */
+  box-sizing: border-box;
+  padding: 8px 0; /* Add vertical padding for dropdown items */
+}
+
+/* Dropdown items */
+.search-bar-dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  text-align: center; /* Center-align text */
+}
+
+.search-bar-dropdown-item:hover {
+  background-color: #f1f1f1; /* Highlight effect on hover */
+}
+
+/* Individual dropdowns (league and season selectors) */
+.league-selector,
+.season-selector {
+  order: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+/* Style for select elements */
+select {
+  background-color: #444;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 16px;
+  width: 200px;
+  transition: background-color 0.3s ease;
+  height: 50px; /* Match height to input and buttons */
+}
+
+select:focus {
+  outline: none;
+  background-color: #555;
+}
+
+option {
+  background-color: #333;
+  color: white;
+}
+
+option:disabled {
+  color: #999;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 900px) {
+  .search-bar-container {
+    padding: 10px 0; /* Reduced padding */
+  }
+
+  .search-bar {
+    min-width: 100%; /* Allow search bar to take full width on smaller screens */
+    max-width: 100%; /* Set max-width to 100% */
+  }
+
+  .search-input {
+    font-size: 16px; 
+    height: 45px; /* Slightly reduce height */
+  }
+
+  .search-button {
+    font-size: 16px; 
+    height: 45px; /* Slightly reduce height */
+  }
+
+  .toggle-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center the buttons */
+  }
+
+  .top-toggle-button,
+  .compare-favorites-button {
+    width: 100%; /* Make buttons take full width on small screens */
+    height: auto; 
+    padding: 10px 20px; 
+    margin-bottom: 10px; /* Space between buttons */
+  }
+
+  .label-container {
+    margin-top: 20px; /* Add space between button and labels */
+  }
+
+  .search-bar-dropdown {
+    width: 100%; /* Make dropdown take full width */
+    left: 0; /* Align dropdown to left */
+    transform: none; /* Remove translation */
+  }
+
+  .search-bar-dropdown-item {
+    padding: 12px; /* Increase padding for better touch targets */
+  }
+
+  select {
+    width: 100%; /* Make select elements take full width */
+  }
+}
+
+@media (max-width: 768px) {
+  .search-bar-container {
+    padding: 5px 0; /* Reduce padding further */
+  }
+
+  .search-input {
+    font-size: 14px; 
+    height: 40px; /* Further reduce input height */
+  }
+
+  .search-button {
+    font-size: 14px; 
+    height: 40px; /* Reduce button height */
+  }
+
+  .toggle-buttons {
+    gap: 8px; /* Reduce gap between buttons */
+  }
+
+  .top-toggle-button,
+  .compare-favorites-button {
+    width: 100%; /* Ensure buttons take full width */
+    padding: 8px 16px; 
+    margin-bottom: 8px; /* Reduce space between buttons */
+  }
+
+  label {
+    font-size: 14px; 
+  }
+
+  select {
+    width: 100%; /* Ensure select takes full width */
+    padding: 6px 10px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    font-size: 14px; 
+    height: 35px; 
+  }
+
+  .search-button {
+    font-size: 14px; 
+    height: 35px; 
+  }
+
+  .top-toggle-button,
+  .compare-favorites-button {
+    font-size: 14px; 
+    width: 100%; /* Ensure buttons take full width */
+    padding: 8px 12px; 
+    margin-bottom: 6px; /* Reduce space between buttons */
+  }
+
+  .search-bar {
+    padding: 0 10px; /* Reduce padding for better fit */
+  }
+
+  .search-bar-dropdown {
+    width: 100%; /* Ensure dropdown takes full width */
+  }
+}
+
+@media (max-width: 360px) {
+  .search-input {
+    font-size: 12px; 
+    height: 30px; 
+  }
+
+  .search-button {
+    font-size: 12px; /* Reduce font size for small devices */
+    height: 30px; /* Smaller button height */
+  }
+
+  .top-toggle-button,
+  .compare-favorites-button {
+    font-size: 12px; /* Smaller font size for ultra-small screens */
+    width: 100%; /* Ensure buttons are full-width */
+    padding: 6px 10px; 
+    margin-bottom: 4px; /* Tighten button spacing */
+  }
+
+  .search-bar {
+    padding: 0 8px; /* Further reduce padding for smaller screens */
+  }
+
+  .search-bar-dropdown {
+    width: 100%; /* Keep dropdown full-width */
+  }
+}

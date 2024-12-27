@@ -1,0 +1,42 @@
+/* Player rank styling */
+.player-rank {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.first-place {
+  color: gold;
+}
+
+.second-place {
+  color: silver;
+}
+
+.third-place {
+  color: #cd7f32;
+}
+
+.other-places {
+  color: white;
+}
+  
+  /* Detail Page Loading Screen */
+  .loading-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .loading-details img {
+    width: 100px;
+    height: 100px;
+    animation: spin 1.5s linear infinite;
+  }
+  

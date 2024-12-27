@@ -1,0 +1,134 @@
+/* General styling for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #555;
+  border: 2px solid #000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo section styling */
+.navbar-logo button {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 5px 10px;
+}
+
+.navbar-logo button:hover {
+  text-decoration: underline;
+  color: #fafafa;
+}
+
+/* Search bar container styling */
+.navbar-search-container {
+  position: relative;
+  width: 300px; 
+}
+
+/* Search input styling */
+.navbar-search-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Search bar styling */
+.navbar-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  position: relative;
+  width: 100%; 
+  max-width: 600px; 
+}
+
+/* Dropdown styling */
+.dropdown {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Dropdown items styling */
+.navbar-dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.navbar-dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Search button styling */
+.navbar-search-button {
+  background-color: #f0f0f0;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-search-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
+/* Logout button styling */
+.navbar-logout button {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.navbar-logout button:hover {
+  background-color: #cc0000;
+}
+
+/* Player photo styling for dropdown items */
+.navbar-player-photo {
+  width: 25px;  
+  height: 25px; 
+  border-radius: 50%; 
+  object-fit: cover;  
+  margin-right: 8px;  
+}
+
+.navbar-player-name {
+  font-size: 14px;
+  color: black; 
+}
+
+.navbar-dropdown-item img {
+  width: 25px;  
+  height: 25px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-right: 8px; 
+}

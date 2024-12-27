@@ -1,0 +1,150 @@
+/* Container for the player images */
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  margin-bottom: 0px;
+  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+}
+
+/* Logo image */
+.logo-image {
+  position: absolute; /* Keeps the logo positioned */
+  width: 250px; /* Set a fixed width */
+  height: 250px; /* Set height equal to width */
+  border-radius: 50%; /* Makes the logo circular */
+  object-fit: cover;
+}
+
+/* Player images styling */
+.player-image-1 {
+  width: 200px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.player-image-2 {
+  width: 250px;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 1200px) {
+  .image-container {
+    gap: 50px; /* Reduce gap for smaller screens */
+  }
+
+  .logo-image {
+    width: 200px; /* Reduce logo size */
+    height: 200px; /* Maintain square aspect ratio */
+  }
+
+  .player-image-1 {
+    width: 180px; /* Reduce image size */
+  }
+
+  .player-image-2 {
+    width: 230px; /* Adjust image size */
+  }
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    gap: 30px; /* Further reduce gap */
+  }
+
+  .logo-image {
+    width: 180px; /* Reduce logo size for tablets */
+    height: 180px;
+  }
+
+  .player-image-1 {
+    width: 150px; /* Further reduce size */
+  }
+
+  .player-image-2 {
+    width: 200px; /* Adjust size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    gap: 20px; /* Tighten gap for mobile screens */
+    justify-content: space-evenly; /* Distribute images evenly */
+  }
+
+  .logo-image {
+    width: 150px; /* Further reduce logo size for small screens */
+    height: 150px;
+  }
+
+  .player-image-1 {
+    width: 130px; /* Small player image size */
+  }
+
+  .player-image-2 {
+    width: 180px; /* Adjust size for mobile */
+  }
+}
+
+@media (max-width: 360px) {
+  .image-container {
+    gap: 10px; /* Minimize the gap even more for very small screens */
+  }
+
+  .logo-image {
+    width: 120px; /* Reduce the logo size significantly */
+    height: 120px;
+  }
+
+  .player-image-1 {
+    width: 110px; /* Further reduce player image size */
+  }
+
+  .player-image-2 {
+    width: 150px; /* Adjust player image size for small mobile devices */
+  }
+}
+
+/* For ultra-small screens (below 320px) */
+@media (max-width: 290px) {
+  .image-container {
+    gap: 5px; /* Remove unnecessary gap */
+    justify-content: center; /* Center images */
+  }
+
+  .logo-image {
+    width: 90px; /* Reduce the logo size further */
+    height: 90px;
+  }
+
+  .player-image-1 {
+    width: 80px; /* Very small player image size */
+  }
+
+  .player-image-2 {
+    width: 120px; /* Adjust player image size */
+  }
+}
+
+@media (max-width: 240px) {
+  .image-container {
+    gap: 3px; /* Tighten gap for very small screens */
+    justify-content: center; /* Ensure everything is centered */
+  }
+
+  .logo-image {
+    width: 70px; /* Extremely small logo size */
+    height: 70px;
+  }
+
+  .player-image-1 {
+    width: 60px; /* Smallest image size for ultra-narrow screens */
+  }
+
+  .player-image-2 {
+    width: 90px; /* Adjust player image size */
+  }
+}
+

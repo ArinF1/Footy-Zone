@@ -1,0 +1,108 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Background */
+body {
+    background-image: url('/src/images/footballfield.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    height: 100vh;
+}
+
+/* Container for Centering Forms */
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Form Card */
+.form-card-login {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    text-align: center;
+    animation: fadeIn-login 1s ease-in-out;
+}
+
+/* Title */
+h1.login-title, h3.login-title {
+    margin-bottom: 1.5rem;
+    color: #00b4d8;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+/* Inputs */
+input.login-input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #777;
+    border-radius: 4px;
+    background: #333;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+input.login-input::placeholder {
+    color: #bbb;
+}
+
+/* Buttons */
+button.login-button {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 4px;
+    background: #00b4d8;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button.login-button:hover {
+    background: #0077b6;
+}
+
+/* Navigation Buttons */
+.nav-buttons-login button {
+    background: transparent;
+    border: 1px solid #00b4d8;
+    color: #00b4d8;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-buttons-login button:hover {
+    background: #00b4d8;
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn-login {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
